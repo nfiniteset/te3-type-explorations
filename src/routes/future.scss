@@ -1,0 +1,82 @@
+@import "../_mixins.scss";
+@import "./today.scss";
+
+.future {  
+  h1, h2 {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    @include margin($top: 12px, $bottom: 4px);
+  }
+
+  &.large-headers {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &.medium-headers {
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  
+  &.small-headers {
+    h1 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    
+    h2 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &.p-w-margin p {
+    @include margin($top: 0, $bottom: 8px);
+  }
+
+  &.blank-p-narrow .spacer {
+    height: 8px;
+  }
+  
+  p, ul, ol {
+    line-height: 22px;
+    font-size: 14px;
+    @include margin($top: 0, $bottom: 0);
+  }
+  
+  p {
+    @include margin($top: 0, $bottom: 0);
+  }
+  
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 24px;
+    @include margin($top: 8px, $bottom: 8px);
+    
+    // Indented list items (marked up as nested lists) do no have extra margin
+    & > ul, & > ol {
+      @include margin(0);
+    }
+  }
+  
+  li {
+    padding: 0;
+    @include margin($top: 0, $bottom: 4px);
+  }
+}

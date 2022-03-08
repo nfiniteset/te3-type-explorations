@@ -1,0 +1,27 @@
+@import "../_mixins.scss";
+
+.today {  
+  p, ul, ol, code {
+    line-height: 22px;
+    font-size: 14px;
+    @include margin($top: 0, $bottom: 0);
+  }
+  
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 24px;
+    @include margin($top: 0, $bottom: 0);
+    
+    // Indented list items (marked up as nested lists) do no have extra margin
+    & > ul, & > ol {
+      @include margin(0);
+    }
+  }
+  
+  li {
+    padding: 0;
+    @include margin($top: 0, $bottom: 0);
+    margin-left: 32px;
+  }
+}

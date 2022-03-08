@@ -1,0 +1,43 @@
+@mixin tracerContainer {
+  --tracer-background: transparent;
+  
+  &.show-tracer {
+    --tracer-background: #A499ED80;
+  }
+}
+
+@mixin tracer($top: 0, $bottom: 0) {
+  position: relative;
+  
+  &:before, &:after {
+    content: ".";
+    color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    background-color: var(--tracer-background);
+    
+    transition: background-color 0.1s ease-out;
+  }
+  
+  &:before {
+    top: -$top;
+    height: $top;
+  }
+    
+  &:after {
+    bottom: -$bottom;
+    height: $bottom;
+  }
+  
+  @at-root .show-tracer & {
+    transition: none;
+  }
+}
+
+@mixin margin($top: 0, $bottom: 0) {
+  margin-bottom: $bottom;
+  margin-top: $top;
+  @include tracer($top, $bottom);
+}
