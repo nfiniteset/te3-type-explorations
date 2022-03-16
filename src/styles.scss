@@ -60,15 +60,37 @@ body {
   margin: 0;
   padding: 0;
 
-  & li {
+  li {
     margin: 0 0 8px 0;
     list-style: none;
     position: relative;
 
-    &:before {
-      content: "• ";
-      position: absolute;
-      left: -12px;
+    &.reccomended {
+      &:before {
+        content: "\2605 ";
+        color: #A499ED;
+        font-size: 10px;
+        position: absolute;
+        top: 3px;
+        left: -16px;
+      }
+    }
+  }
+
+  a {
+    color: black;
+    padding: 2px 4px;
+    display: inline-block;
+    border-radius: 2px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(#A499ED, 0.25);
+    }
+
+    &.active {
+      background-color: rgba(#A499ED, 0.5);
+      color: black;
     }
   }
 }

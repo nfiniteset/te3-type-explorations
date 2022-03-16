@@ -49,6 +49,13 @@
     @include margin($top: 0, $bottom: 8px);
   }
 
+  &.list-items-w-margin {
+    li {
+      padding: 0;
+      @include margin($top: 0, $bottom: 4px);
+    }
+  }
+
   &.blank-p-narrow .spacer {
     height: 8px;
   }
@@ -73,10 +80,5 @@
     & > ul, & > ol {
       @include margin(0);
     }
-  }
-  
-  li {
-    padding: 0;
-    @include margin($top: 0, $bottom: 4px);
   }
 }

@@ -12,6 +12,7 @@ import FuturePwoMargin from "./routes/future-p-wo-margin";
 import FuturePwMargin from "./routes/future-p-w-margin";
 import FutureBlankPNarrow from "./routes/future-blank-p-narrow";
 import FutureListsWMargin from "./routes/future-lists-w-margin";
+import FutureListItemsWMargin from "./routes/future-list-items-w-margin";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -35,6 +36,10 @@ ReactDOM.render(
           <Route
             path="future-lists-w-margin"
             element={<FutureListsWMargin />}
+          />
+          <Route
+            path="future-list-items-w-margin"
+            element={<FutureListItemsWMargin />}
           />
         </Route>
       </Routes>

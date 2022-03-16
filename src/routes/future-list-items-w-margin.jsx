@@ -5,7 +5,7 @@ import ListsWP from "../sections/lists-w-p";
 
 export default function PwoMargin() {
   return (
-    <div className="future lists-w-margin">
+    <div className="future list-items-w-margin">
       <ListsWHeaders />
       <ListsWP />
     </div>

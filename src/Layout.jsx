@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink as Link, Outlet } from "react-router-dom";
 
 export default function Layout() {
   const [showMargins, setShowMargins] = useState(false);
@@ -17,15 +17,29 @@ export default function Layout() {
           <h1 className="example-header">Typographical explorations</h1>
 
           <p className="spacer"></p>
+          <h3 className="example-header">Recommended</h3>
+          <ul className="nav-list">
+            <li className="reccomended">
+              <Link to="/future-small-headers">Small headers</Link>
+            </li>
+            <li className="reccomended">
+              <Link to="/future-p-wo-margin">
+                Paragraphs without margins <br />
+                (Blank paragraph hieght = line height)
+              </Link>
+            </li>
+            <li className="reccomended">
+              <Link to="/future-lists-w-margin">Lists with margins</Link>
+            </li>
+          </ul>
+
+          <p className="spacer"></p>
           <h3 className="example-header">Paragraph margin</h3>
           <ul className="nav-list">
             <li>
-              <Link to="/today">Today - No paragraph spacing</Link>
-            </li>
-            <li>
               <Link to="/future-p-w-margin">Paragraphs with margins</Link>
             </li>
-            <li>
+            <li className="reccomended">
               <Link to="/future-p-wo-margin">
                 Paragraphs without margins <br />
                 (Blank paragraph hieght = line height)
@@ -42,7 +56,7 @@ export default function Layout() {
           <p className="spacer"></p>
           <h3 className="example-header">Header size</h3>
           <ul className="nav-list">
-            <li>
+            <li className="reccomended">
               <Link to="/future-small-headers">Small headers</Link>
             </li>
             <li>
@@ -56,8 +70,13 @@ export default function Layout() {
           <p className="spacer"></p>
           <h3 className="example-header">List & list item margin</h3>
           <ul className="nav-list">
-            <li>
+            <li className="reccomended">
               <Link to="/future-lists-w-margin">Lists with margins</Link>
+            </li>
+            <li>
+              <Link to="/future-list-items-w-margin">
+                Lists & list items with margins
+              </Link>
             </li>
           </ul>
           <p className="spacer"></p>
