@@ -41,6 +41,38 @@ body {
   // position: absolute;
 }
 
+.nav-annotation {
+  display: inline-block;
+  margin: 16px -12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #eee;
+
+  & code {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0 0 8px 0;
+    list-style: none;
+    position: relative;
+
+    &:before {
+      content: "• ";
+      position: absolute;
+      left: -12px;
+    }
+  }
+}
+
 .task-panel {
   border: 1px solid #edf1f2;
   
